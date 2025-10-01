@@ -1,3 +1,4 @@
+
 name: Cache Test
 
 on:
@@ -17,6 +18,9 @@ jobs:
         uses: actions/setup-node@v4
         with:
           node-version: 18
+
+      - name: Create npm cache dir
+        run: mkdir -p ~/.npm
 
       - name: prime-cache-9731c5d
         id: cache
